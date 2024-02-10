@@ -1,0 +1,63 @@
+body{
+    margin:  100px auto 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: #050210;
+}
+
+.krug{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b970ff);
+    border-radius: 360px;
+}
+
+.krug::after{
+    content: " ";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #050210;
+    border-radius: 360px;
+}
+
+.krug span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b970ff);
+    border-radius: 360px;
+    animation: animacija 0.9s linear infinite;
+}
+
+@keyframes animacija {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.krug span:nth-child(1){
+    filter: blur(10px);
+}
+
+.krug span:nth-child(2){
+    filter: blur(40px);
+}
+
+.krug span:nth-child(3){
+    filter: blur(120px);
+}
+
+
+
+
+
