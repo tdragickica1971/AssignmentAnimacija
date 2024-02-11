@@ -14,25 +14,6 @@ body{
     height: 400px;
     background: linear-gradient(#fb5dad, #55fb9f, #b970ff);
     border-radius: 360px;
-}
-
-.krug::after{
-    content: " ";
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #050210;
-    border-radius: 360px;
-}
-
-.krug span {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(#fb5dad, #55fb9f, #b970ff);
-    border-radius: 360px;
     animation: animacija 0.9s linear infinite;
 }
 
@@ -43,6 +24,35 @@ body{
     100%{
         transform: rotate(360deg);
     }
+}    
+
+.krug::after{
+    content: " ";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #050210;
+    border-radius: 360px;
+    animation: puls 1.5s linear infinite;
+}
+
+@keyframes puls {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.krug span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b970ff);
+    border-radius: 360px;
 }
 
 .krug span:nth-child(1){
@@ -57,7 +67,14 @@ body{
     filter: blur(120px);
 }
 
-
+.unutrasnji {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: #050210;
+    border-radius: 360px;
+    filter: opacity(95%);
+}
 
 
 
